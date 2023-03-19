@@ -46,12 +46,11 @@ const App = () => {
 
 
       <button className="fetch-data-btn" onClick={fatchData}>Fetch User Data</button>
-      <button className="sort-btn" on onClick={sortFun}>{
-        sortAscending ? "Sort by name length (ascending)" : "Sort by name length (descending)"
-      }
 
 
-      </button>
+      {sortAscending ? (<button className="sort-btn" on onClick={sortFun}>Sort by name length (ascending)</button>) : (
+        <button className="sort-btn" on onClick={sortFun}>Sort by name length (descending)</button>
+      )}
 
 
       {/* loder----------------------------------------------------------------- */}
